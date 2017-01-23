@@ -1,0 +1,22 @@
+.carousel-inner>div>img{
+    width: 100%;
+    height:600px;
+}
+.right-news>div{
+    margin-top: 20px;
+}
+.left-slide{
+    margin-top: 20px;
+}
+.title-like{
+    margin-left: 10px;
+    color: #ccc;
+    margin-top: 20px;
+}
+.like-list>img{
+    width: 100%;
+    height:500px;
+}
+.like-list>h3{
+    margin-top: 10px;
+}
