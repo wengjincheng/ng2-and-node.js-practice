@@ -5,8 +5,12 @@ const production  = require('../production');
 
 module.exports = {
     'GET /api/products': async (ctx, next) => {
+        var x = [];
+        await production.x().then((v)=> { 
+            x = v;
+        });
         ctx.rest({
-            code: production.getNews()
+            code: x
         });
     },
 };

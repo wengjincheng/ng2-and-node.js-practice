@@ -43,19 +43,25 @@ var now = Date.now();
 })();
 
 
-var code = [];
-(async ()=>{
+
+var x  = async ()=>{
             var New1 = await News.findAll({
                 where: {
-                    id: 'p-1485244092871'
+                            id: 'p-1485309768932'
                 }
             });
             var y = JSON.stringify(New1);
-            code = y;
-})();
-module.exports = {
-     getNews: () => {
-        return code;
-    },
-};
+            return y;
+        };
 
+module.exports = {
+    x: async (next)=>{
+            var New1 = await News.findAll({
+                where: {
+                            id: 'p-1485309768932'
+                }
+            });
+            var y = JSON.stringify(New1);
+            return y;
+        },
+}
