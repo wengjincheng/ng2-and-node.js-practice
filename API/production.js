@@ -27,41 +27,32 @@ var News = sequelize.define('news', {
         timestamps: false
     });
 
-var now = Date.now();
-
-(async () => {
-    var test = await News.create({
-        id: 'p-'+now,
-        title: '次元壁',
-        content: '第一次测试',
-        image: 'img/demo.jpg',
-        createdAt: now,
-        updatedAt: now,
-        version: 0
-    });
-    console.log('created: ' + JSON.stringify(test));
-})();
 
 
 
-var x  = async ()=>{
-            var New1 = await News.findAll({
-                where: {
-                            id: 'p-1485309768932'
-                }
-            });
-            var y = JSON.stringify(New1);
-            return y;
-        };
 
 module.exports = {
     x: async (next)=>{
             var New1 = await News.findAll({
                 where: {
-                            id: 'p-1485309768932'
+                            id: 'p-1486906489996'
                 }
             });
             var y = JSON.stringify(New1);
             return y;
         },
+    c:async () => {
+        var now = Date.now();
+        var test = await News.create({
+                id: 'p-'+now,
+                title: '次元壁',
+                content: '第一次测试',
+                image: 'img/demo.jpg',
+                createdAt: now,
+                updatedAt: now,
+                version: 0
+            });
+        console.log('created: ' + JSON.stringify(test));
+        return "success";
+    },
 }
