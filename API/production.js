@@ -32,10 +32,10 @@ var News = sequelize.define('news', {
 
 
 module.exports = {
-    x: async (next)=>{
+    x: async (id,next)=>{
             var New1 = await News.findAll({
                 where: {
-                            id: 'p-1486906489996'
+                            id: id
                 }
             });
             var y = JSON.stringify(New1);

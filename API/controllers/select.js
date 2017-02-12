@@ -4,9 +4,10 @@ const APIError = require('../rest').APIError;
 const production  = require('../production');
 
 module.exports = {
-    'GET /api/products': async (ctx, next) => {
+    'GET /api/products/:id': async (ctx, next) => {
         var x = [];
-        await production.x().then((v)=> { 
+        var id = ctx.params.id;
+        await production.x(id).then((v)=> { 
             x = v;
         });
         ctx.rest({
